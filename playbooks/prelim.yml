@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: update repository index
+    apt:
+      update_cache: yes
+
+  - name: install python3 package
+    apt:
+      name: python3
+
+  - name: install java open-jdk
+    apt: 
+      name: openjdk-17-jre
